@@ -59,7 +59,7 @@ class ViewController: UIViewController ,UITableViewDataSource,UITableViewDelegat
     // 返回高度
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
     {
-        return 100
+        return 100;
     }
     // 每个分区的行数
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
