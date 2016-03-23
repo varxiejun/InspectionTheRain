@@ -10,12 +10,12 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
-    var picture = UIImageView()
-    var name = UILabel()
-    var gender = UILabel()
-    var age = UILabel()
-    var hobby = UILabel()
-    var phoneNumber = UILabel()
+    var picture = UIImageView() // 照片
+    var name = UILabel()        // 姓名
+    var gender = UILabel()      // 性别
+    var age = UILabel()         // 年龄
+    var hobby = UILabel()       // 爱好
+    var phoneNumber = UILabel() // 电话
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         self.person = Person()
@@ -64,11 +64,9 @@ class TableViewCell: UITableViewCell {
     }
     var person : Person
     {
-        didSet
-        {
+        didSet{
             self.name.text = person.name
-            self.picture.image = UIImage(contentsOfFile: NSBundle.mainBundle().bundlePath.stringByAppendingString(
-                "/" + person.picture))
+            self.picture.image = UIImage(named: person.picture)
             self.gender.text = person.gender
             self.hobby.text = person.hobby
             self.phoneNumber.text = "电话:" + person.phoneNumber
