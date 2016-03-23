@@ -23,6 +23,7 @@ class TableViewCell: UITableViewCell {
         picture.frame = CGRectMake(10, 10, 60, 80)
         
         let nameLabel = UILabel()
+        
         nameLabel.frame = CGRectMake(80, 10, 40, 20)
         nameLabel.text = "姓名:"
         nameLabel.font = UIFont .systemFontOfSize(14)
